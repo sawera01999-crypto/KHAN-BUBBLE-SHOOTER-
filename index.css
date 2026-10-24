@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+html, body, #root { height: 100%; margin: 0; overflow: hidden; background: #0b1020; }
+body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; -webkit-tap-highlight-color: transparent; user-select: none; -webkit-user-select: none; overscroll-behavior: none; }
+canvas { touch-action: none; display: block; }
+
+@keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(40px) } to { opacity: 1; transform: none } }
+@keyframes slideDown { from { opacity: 0; transform: translateY(-30px) } to { opacity: 1; transform: none } }
+@keyframes popIn { 0% { opacity: 0; transform: scale(.5) } 70% { opacity: 1; transform: scale(1.06) } 100% { transform: scale(1) } }
+@keyframes floaty { 0%,100% { transform: translateY(0) rotate(-4deg) } 50% { transform: translateY(-16px) rotate(4deg) } }
+@keyframes rise { 0% { transform: translateY(0) scale(.6); opacity: 0 } 10% { opacity: .8 } 100% { transform: translateY(-110vh) scale(1.1); opacity: 0 } }
+@keyframes pulseGlow { 0%,100% { box-shadow: 0 0 0 0 rgba(255,255,255,.7), 0 8px 0 rgba(0,0,0,.25) } 50% { box-shadow: 0 0 0 14px rgba(255,255,255,0), 0 8px 0 rgba(0,0,0,.25) } }
+@keyframes logoBounce { 0%,100% { transform: translateY(0) scale(1) } 50% { transform: translateY(-8px) scale(1.03) } }
+@keyframes shine { 0% { background-position: -200% 0 } 100% { background-position: 200% 0 } }
+@keyframes starPop { 0% { transform: scale(0) rotate(-180deg); opacity: 0 } 60% { transform: scale(1.35) rotate(15deg); opacity: 1 } 100% { transform: scale(1) rotate(0) } }
+@keyframes confetti { 0% { transform: translateY(-10vh) rotate(0) } 100% { transform: translateY(110vh) rotate(720deg) } }
+@keyframes wobble { 0%,100% { transform: rotate(0) } 25% { transform: rotate(-6deg) } 75% { transform: rotate(6deg) } }
+@keyframes bob { 0%,100% { transform: translate(-50%, 0) } 50% { transform: translate(-50%, -8px) } }
+@keyframes spin { to { transform: rotate(360deg) } }
+
+.anim-fade { animation: fadeIn .35s ease both }
+.anim-slide { animation: slideUp .45s cubic-bezier(.2,.9,.3,1.2) both }
+.anim-down { animation: slideDown .4s ease both }
+.anim-pop { animation: popIn .45s cubic-bezier(.2,.9,.3,1.3) both }
+.anim-float { animation: floaty 5s ease-in-out infinite }
+.anim-logo { animation: logoBounce 2.4s ease-in-out infinite }
+.anim-pulse { animation: pulseGlow 1.6s ease-out infinite }
+.anim-star { animation: starPop .6s cubic-bezier(.2,.9,.3,1.4) both }
+.anim-wobble { animation: wobble .5s ease }
+.anim-bob { animation: bob 1.2s ease-in-out infinite }
+
+.shine-text {
+  background: linear-gradient(90deg, #fff 20%, #fde047 40%, #fff 60%, #f472b6 80%, #fff 100%);
+  background-size: 200% auto; -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: shine 4s linear infinite;
+}
+.btn3d { transition: transform .12s ease, filter .12s ease; box-shadow: 0 6px 0 rgba(0,0,0,.28), inset 0 2px 0 rgba(255,255,255,.35); }
+.btn3d:hover { filter: brightness(1.08); transform: translateY(-1px) }
+.btn3d:active { transform: translateY(4px); box-shadow: 0 2px 0 rgba(0,0,0,.28), inset 0 2px 0 rgba(255,255,255,.35) }
+.glass { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.no-scrollbar::-webkit-scrollbar { display: none }
+.no-scrollbar { scrollbar-width: none }
+.text-stroke { text-shadow: 0 3px 0 rgba(0,0,0,.35), 0 0 18px rgba(0,0,0,.25) }

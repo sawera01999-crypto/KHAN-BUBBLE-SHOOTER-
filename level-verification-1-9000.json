@@ -1,0 +1,14 @@
+{
+  "game": "KHAN BUBBLE SHOOTER",
+  "range": [
+    1,
+    9000
+  ],
+  "levelsChecked": 9000,
+  "failures": 0,
+  "avgSolverShots": 23.69,
+  "avgShotLimit": 32.27,
+  "minSpareShots": 2,
+  "seconds": 348.771,
+  "details": []
+}
